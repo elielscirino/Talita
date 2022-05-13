@@ -12,7 +12,7 @@ client.on('ready', () => {
 
 
 client.on("messageCreate", msg => {
-    if (msg.content === ":help") {
+    if (msg.content === "?help") {
         msg.reply(
             '```\n' +
             'Comandos:\n' +
@@ -26,6 +26,16 @@ client.on("messageCreate", msg => {
             '?terror\nExibe recomendação de filme de terror.\n' + 
             '*****************************************\n' +
             '?drama\nExibe recomendação de filme de drama.\n' + 
+            '*****************************************\n' +
+            '?romance\nExibe recomendação de filme de romance.\n' + 
+            '*****************************************\n' +
+            '?comedia\nExibe recomendação de filme de comedia.\n' + 
+            '*****************************************\n' +
+            '?scifi\nExibe recomendação de filme de ficção científica.\n' + 
+            '*****************************************\n' +
+            '?acao\nExibe recomendação de filme de ação.\n' + 
+            '*****************************************\n' +
+            '?misterio\nExibe recomendação de filme de mistério.\n' + 
             '*****************************************\n' +
             '```'
         );
