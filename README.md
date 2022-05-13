@@ -5,12 +5,13 @@ Bot para discord desenvolvido em JavaScript (node.js), tem como funcionalidade r
 O nome é uma homenagem para a criadora do clube.
 
 ## Instruções:
+### Utilizar o código em seu própiro bot:
 
 Em relação aos tokens, crie um arquivo chamado ```config.js``` e adicione o seguinte código:
 ```JavaScript
 const config = {
     botToken: ['token do discord*'],
-    apiToken: ['token da api*'] 
+    apiToken: ['token da api**'] 
 };
 
 module.exports = { config };
@@ -27,3 +28,9 @@ npm install discord.js
 ```
 npm install axios
 ```
+
+## Colabore!
+
+Caso tenha alguma ideia maneira que combine com o tema do bot, algo a acresentar, não hesite em realizar um `Pull Request`.
+
+Tutorial de como realizar sua primeira contribuição <a href="https://github.com/firstcontributions/first-contributions/blob/master/translations/README.pt_br.md">aqui</a>.
