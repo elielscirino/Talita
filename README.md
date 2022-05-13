@@ -34,3 +34,4 @@ npm install axios
 Caso tenha alguma ideia maneira que combine com o tema do bot, algo a acresentar, não hesite em realizar um `Pull Request`.
 
 Tutorial de como realizar sua primeira contribuição <a href="https://github.com/firstcontributions/first-contributions/blob/master/translations/README.pt_br.md">aqui</a>.
+<img width="150" src="https://www.themoviedb.org/assets/2/v4/logos/v2/blue_long_2-9665a76b1ae401a510ec1e0ca40ddcb3b0cfe45f1d51b77a308fea0845885648.svg"> This product uses the TMDB API but is not endorsed or certified by TMDB.
