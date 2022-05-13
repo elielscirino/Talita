@@ -10,20 +10,56 @@ client.on('ready', () => {
     console.log(`${client.user.tag} está online!`)
 });
 
+
 client.on("messageCreate", msg => {
-    if (msg.content === ".help") {
+    if (msg.content === ":help") {
         msg.reply(
-        '.help -> Exibe lista de comandos.\n' +
-        '.recomendado -> Exibe recomendação de filme bem avaliado.\n' +
-        '.popular -> Exibe recomendação de filme popular.'
+            '```\n' +
+            'Comandos:\n' +
+            '*****************************************\n'+
+            '?help\nExibe lista de comandos.\n' +
+            '*****************************************\n' +
+            '?recomendado\nExibe recomendação de filme bem avaliado.\n' +
+            '*****************************************\n' +
+            '?popular\nExibe recomendação de filme popular.\n' + 
+            '*****************************************\n' +
+            '?terror\nExibe recomendação de filme de terror.\n' + 
+            '*****************************************\n' +
+            '?drama\nExibe recomendação de filme de drama.\n' + 
+            '*****************************************\n' +
+            '```'
         );
     }
-    if (msg.content === ".popular") {
-        func.getPopular(msg, imp.config.apiToken);
+
+    switch (msg.content) {
+        case '?popular':
+            func.getPopular(msg, imp.config.apiToken);
+            break;
+        case '?recomendado':
+            func.getTopRated(msg, imp.config.apiToken);
+            break;
+        case '?terror':
+            func.getByGenre(msg, imp.config.apiToken, 27);
+            break;
+        case '?drama':
+            func.getByGenre(msg, imp.config.apiToken, 18);
+            break;
+        case '?comedia':
+            func.getByGenre(msg, imp.config.apiToken, 35);
+            break;
+        case '?romance':
+            func.getByGenre(msg, imp.config.apiToken, 10749);
+            break;
+        case '?scifi':
+            func.getByGenre(msg, imp.config.apiToken, 878);
+            break;
+        case '?acao':
+            func.getByGenre(msg, imp.config.apiToken, 28);
+            break;
+        case '?misterio':
+            func.getByGenre(msg, imp.config.apiToken, 9648);
+            break;
     }
-    if (msg.content === ".recomendado") {
-        func.getTopRated(msg, imp.config.apiToken);
-    }
-  });
+});
 
 client.login(imp.config.botToken);
