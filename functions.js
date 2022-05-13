@@ -26,11 +26,11 @@ async function getTopRated(msg, token) {
                         getTopRated(msg, token)
                     }
                 }).catch(error => {
-                    console.log(error);
+                    console.log(error['code'], error['response']['status'], error['response']['statusText']);
                     getTopRated(msg, token);
                 })
         }).catch(error => {
-            console.log(error);
+            console.log(error['code'], error['response']['status'], error['response']['statusText']);
             getTopRated(msg, token);
         })
 }
@@ -63,11 +63,11 @@ async function getPopular(msg, token) {
                         getPopular(msg, token)
                     }
                 }).catch(error => {
-                    console.log(error);
+                    console.log(error['code'], error['response']['status'], error['response']['statusText']);
                     getPopular(msg, token);
                 })
         }).catch(error => {
-            console.log(error);
+            console.log(error['code'], error['response']['status'], error['response']['statusText']);
             getPopular(msg, token);
         })
 }
@@ -100,11 +100,11 @@ async function getByGenre(msg, token, genre) {
                         getByGenre(msg, token, genre)
                     }
                 }).catch(error => {
-                    console.log(error);
+                    console.log(error['code'], error['response']['status'], error['response']['statusText']);
                     getByGenre(msg, token, genre);
                 })
         }).catch(error => {
-            console.log(error);
+            console.log(error['code'], error['response']['status'], error['response']['statusText']);
             getByGenre(msg, token, genre);
         })
 }
